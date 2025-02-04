@@ -1,0 +1,21 @@
+.CharacterCard_article {
+    margin: 10px;
+    width: 210px;
+    background-color: rgb(145, 109, 17);
+    .CharacterCard_img {
+        width: 210px;
+        height: 295px;
+        object-fit: cover;
+    }
+    .CharacterCard_textContainer {
+        padding: 5px 5px 15px 5px;
+        text-align: center;
+        color: white;
+        h3 {
+            font-weight: bold;
+        }
+        p {
+            font-style: italic;
+        }
+    }
+}
