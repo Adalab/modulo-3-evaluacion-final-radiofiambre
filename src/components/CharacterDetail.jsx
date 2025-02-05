@@ -19,6 +19,7 @@ function CharacterDetail({defineDetailInfo}) {
                 alt={character.name} />
                 <div className="CharacterDetail_textContainer">
                     <h3>{character.name}</h3>
+                    <h4>{character.alternateNames && character.alternateNames.length > 0 ? character.alternateNames.join(', ') : 'No tiene apodos'}</h4>
                     <p>Estatus: <span>{character.alive ? "alive 💖" : "dead 💀"}</span></p>
                     <p>Especie: <span>{character.species}</span></p>
                     <p>Género: <span>{character.gender}</span></p>

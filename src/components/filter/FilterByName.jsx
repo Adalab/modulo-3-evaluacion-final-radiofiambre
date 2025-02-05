@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 function FilterByName({setSearchByName, characterNotFoundMessage}) {
   
     const handleInput = (event) => {
-        setSearchByName(event.target.value.toLowerCase())
+      setSearchByName(event.target.value.toLowerCase())
     }
   
   return (
     <div className="Filter">
-        <label htmlFor="">Search by name</label>
-        <input type="text" onChange={handleInput}/>
-        <p>{characterNotFoundMessage}</p>
+      <label htmlFor="">Search by name</label>
+      <input type="text" onChange={handleInput}/>
+      <p>{characterNotFoundMessage}</p>
     </div>
   )
 }

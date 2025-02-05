@@ -5,12 +5,13 @@ import '../../styles/Form.scss';
 
 function Filters(props) {
 
-  const handleForm = (event) => {
-    event.preventDefault();
-  }
+  // const handleForm = (event) => {
+  //   event.preventDefault();
+  // }
 
   return (
-    <form className="Form_container" onChange={handleForm}>
+    // <form className="Form_container" onChange={handleForm}>
+    <form className="Form_container">
       <FilterByName setSearchByName={props.setSearchByName} characterNotFoundMessage={props.characterNotFoundMessage}/>
       <FilterByHouse setSearchByHouse={props.setSearchByHouse}/>
     </form>
