@@ -11,7 +11,7 @@ function Filters(props) {
 
   return (
     <form className="Form_container" onChange={handleForm}>
-      <FilterByName setSearchByName={props.setSearchByName}/>
+      <FilterByName setSearchByName={props.setSearchByName} characterNotFoundMessage={props.characterNotFoundMessage}/>
       <FilterByHouse setSearchByHouse={props.setSearchByHouse}/>
     </form>
   )
@@ -19,7 +19,8 @@ function Filters(props) {
 
 Filters.propTypes = {
   setSearchByName: PropTypes.func,
-  setSearchByHouse: PropTypes.func
+  setSearchByHouse: PropTypes.func,
+  characterNotFoundMessage: PropTypes.string
 }
 
 export default Filters

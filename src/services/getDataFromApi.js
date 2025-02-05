@@ -10,6 +10,7 @@ function getDataFromApi() {
                 species: character.species,
                 house: character.house,
                 alive: character.alive,
+                gender: character.gender,
                 alternateNames: character.alternate_names
             }
         })

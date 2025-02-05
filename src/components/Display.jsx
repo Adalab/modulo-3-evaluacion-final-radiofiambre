@@ -2,10 +2,10 @@ import PropTypes from "prop-types"
 import CharacterCard from "./CharacterCard"
 import '../styles/Display.scss'
 
-function Display(props) {
+function Display({characterList}) {
 
-    const characterCards = props.characterList.map(character =>
-        <CharacterCard key={character.id} name={character.name} photo={character.photo} species={character.species}/>
+    const characterCards = characterList.map(character =>
+        <CharacterCard key={character.id} id={character.id} name={character.name} photo={character.photo} species={character.species}/>
     )
       
     return (
