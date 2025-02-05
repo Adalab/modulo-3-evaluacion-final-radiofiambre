@@ -1,14 +1,15 @@
 import '../styles/App.scss';
 import { useEffect, useState } from 'react';
 import Display from './Display';
-import Filters from './filter/Filters';
+import Form from './filter/Form';
 import Header from './Header';
 import getDataFromApi from '../services/getDataFromApi';
 
 function App() {
 
-  const [characterList, setCharacterList] = useState([]) // array de personajes
-  const [searchByName, setSearchByName] = useState('') // string con un nombre
+  const [characterList, setCharacterList] = useState([])
+  const [searchByName, setSearchByName] = useState('')
+  const [searchByHouse, setSearchByHouse] = useState('gryffindor')
 
   useEffect(() => {
     getDataFromApi()
@@ -16,13 +17,15 @@ function App() {
       .then(setCharacterList)
   }, []);
 
-  const filterByName = characterList.filter(character => character.name.toLowerCase().includes(searchByName));
+  const filterCharacter = characterList
+    .filter((character) => character.name.toLowerCase().includes(searchByName))
+    .filter((character) => character.house.toLowerCase() === searchByHouse)
 
   return (
     <>
       <Header/>
-      <Filters setSearchByName={setSearchByName}/>
-      <Display characterList={filterByName}/>
+      <Form setSearchByName={setSearchByName} setSearchByHouse={setSearchByHouse}/>
+      <Display characterList={filterCharacter}/>
     </>
   );
 }

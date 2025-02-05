@@ -7,10 +7,10 @@ function FilterByName({setSearchByName}) {
     }
   
   return (
-    <>
+    <div className="Filter">
         <label htmlFor="">Search by name</label>
         <input type="text" onChange={handleInput}/>
-    </>
+    </div>
   )
 }
 
