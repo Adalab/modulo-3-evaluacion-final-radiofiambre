@@ -24,6 +24,22 @@ function App() {
     .filter((character) => character.name.toLowerCase().includes(name))
     .filter((character) => character.house.toLowerCase() === house)
 
+
+
+
+
+  useEffect(() => {
+    if (name && filterCharacter.length === 0) {
+      setCharacterNotFoundMessage(`Oh, no! The crystal ball can't find this character`);
+    } else {
+      setCharacterNotFoundMessage(''); // Limpiar mensaje si hay resultados
+    }
+  }, [name, filterCharacter]); // Solo vuelve a ejecutarse cuando name o filterCharacter cambian
+  
+
+
+
+
   const defineDetailInfo = (characterId) => {
     const characterFound = characterList.find(character => character.id === characterId);
     return characterFound;

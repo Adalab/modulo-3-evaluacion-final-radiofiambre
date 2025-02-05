@@ -1,13 +1,21 @@
 .Form_container {
     display: block;
     .Filter_container {
-        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px;
         label {
-            margin: 20px;
+            margin: 0px 10px;
         }
-        p {
-            width: 300px;
-            background-color: red;
-        }
+    }
+}
+
+.Filter_notFound {
+    font-style: italic;
+    color: rgb(148, 50, 191);
+    padding-left: 10px;
+    span {
+        font-style: normal;
     }
 }

@@ -9,10 +9,9 @@ function FilterByName({name, setName, characterNotFoundMessage}) {
   
   return (
     <div className="Filter_container">
-      <label htmlFor="">Search by name</label>
-      <input type="text" value={name} onChange={handleInput}/>
-      {/* he pasado {name} pero tampoco funciona */}
-      <p>sss{characterNotFoundMessage}</p>
+      <label htmlFor="">Search by name:</label>
+      <input type="text" value={name} placeholder='Type here...' onChange={handleInput}/> 
+      <p className='Filter_notFound'>{characterNotFoundMessage}<span>🔮</span></p>
     </div>
   )
 }
