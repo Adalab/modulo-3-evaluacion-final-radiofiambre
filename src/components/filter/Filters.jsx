@@ -1,9 +1,21 @@
-import React from 'react'
+import PropTypes from 'prop-types';
+import FilterByName from './FilterByName'
 
-function Filters() {
+function Filters(props) {
+
+  const handleForm = (event) => {
+    event.preventDefault();
+  }
+
   return (
-    <div>Filters</div>
+    <form onChange={handleForm}>
+    <FilterByName setSearchByName={props.setSearchByName}/>
+    </form>
   )
+}
+
+Filters.propTypes = {
+  setSearchByName: PropTypes.func
 }
 
 export default Filters

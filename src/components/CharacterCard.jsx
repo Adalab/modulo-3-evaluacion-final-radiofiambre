@@ -3,8 +3,6 @@ import '../styles/CharacterCard.scss'
 
 function CharacterCard(props) {
 
-  // {props.photo = "" ? "https://placehold.co/210x295/ffffff/666666/jpeg?font=playfair-display&text=Harry\nPotter" : {props.photo}}
-
   return (
     <article className="CharacterCard_article">
         <img className="CharacterCard_img"
