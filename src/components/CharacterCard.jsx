@@ -8,7 +8,7 @@ function CharacterCard(props) {
     <article className="CharacterCard_article">
       <Link to={`/character-detail/${props.id}`}>
         <img className="CharacterCard_img"
-        src={props.photo || `https://placehold.co/210x295/000000/777777/jpeg?font=playfair-display&text=${props.name}`} 
+        src={props.photo} 
         alt={props.name}/>
         <div className="CharacterCard_textContainer">
             <h3>{props.name}</h3>

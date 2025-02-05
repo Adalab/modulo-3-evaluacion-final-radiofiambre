@@ -1,22 +1,25 @@
 import PropTypes from 'prop-types';
 
-function FilterByName({setSearchByName, characterNotFoundMessage}) {
+function FilterByName({name, setName, characterNotFoundMessage}) {
   
     const handleInput = (event) => {
-      setSearchByName(event.target.value.toLowerCase())
+      event.preventDefault();
+      setName(event.target.value.toLowerCase())
     }
   
   return (
-    <div className="Filter">
+    <div className="Filter_container">
       <label htmlFor="">Search by name</label>
-      <input type="text" onChange={handleInput}/>
-      <p>{characterNotFoundMessage}</p>
+      <input type="text" value={name} onChange={handleInput}/>
+      {/* he pasado {name} pero tampoco funciona */}
+      <p>sss{characterNotFoundMessage}</p>
     </div>
   )
 }
 
 FilterByName.propTypes = {
-  setSearchByName: PropTypes.func,
+  name: PropTypes.string,
+  setName: PropTypes.func,
   characterNotFoundMessage: PropTypes.string
 }
 

@@ -7,23 +7,25 @@ function CharacterDetail({defineDetailInfo}) {
     const { characterId } = useParams();
     console.log(characterId); //dd925874-e800-4eb4-9f0d-4d0fed15634b
     const character = defineDetailInfo(characterId);
-    console.log(character);
 
   return (
     <>
-    <body>
+    <body className="CharacterDetail_body">
         <div className="CharacterDetail_container">
             <Link to={'/'}><a className="CharacterDetail_linkBack" href="">&lt; Volver</a></Link>
             <article className="CharacterDetail_article">
-                <img className="CharacterDetail_img" src={character.photo || `https://placehold.co/210x295/000000/777777/jpeg?font=playfair-display&text=${character.name}`}
+                <img className="CharacterDetail_img" src={character.photo}
                 alt={character.name} />
                 <div className="CharacterDetail_textContainer">
+                    <img className="CharacterDetail_houseEmblem" src={character.houseEmblem} alt={character.house}/>
                     <h3>{character.name}</h3>
                     <h4>{character.alternateNames && character.alternateNames.length > 0 ? character.alternateNames.join(', ') : 'No tiene apodos'}</h4>
-                    <p>Estatus: <span>{character.alive ? "alive 💖" : "dead 💀"}</span></p>
-                    <p>Especie: <span>{character.species}</span></p>
-                    <p>Género: <span>{character.gender}</span></p>
-                    <p>Casa: <span>{character.house}</span></p>
+                    <div className="CharacterDetail_info">
+                        <p>Status: <span>{character.alive ? "alive 🪄" : "dead 💀"}</span></p>
+                        <p>Species: <span>{character.species}</span></p>
+                        <p>Gender: <span>{character.gender}</span></p>
+                        <p>House: <span>{character.house}</span></p>
+                    </div>
                 </div>
             </article>
         </div>

@@ -10,8 +10,8 @@ import CharacterDetail from './CharacterDetail';
 function App() {
 
   const [characterList, setCharacterList] = useState([])
-  const [searchByName, setSearchByName] = useState('')
-  const [searchByHouse, setSearchByHouse] = useState('gryffindor')
+  const [name, setName] = useState('')
+  const [house, setHouse] = useState('gryffindor')
   const [characterNotFoundMessage, setCharacterNotFoundMessage] = useState('')
 
   useEffect(() => {
@@ -21,19 +21,9 @@ function App() {
   }, []);
 
   const filterCharacter = characterList
-    .filter((character) => character.name.toLowerCase().includes(searchByName))
-    .filter((character) => character.house.toLowerCase() === searchByHouse)
+    .filter((character) => character.name.toLowerCase().includes(name))
+    .filter((character) => character.house.toLowerCase() === house)
 
-  // const filterCharacter = characterList
-  //   .filter(character => {
-  //     if(character.name.toLowerCase().includes(searchByName)) {
-  //       return true
-  //     } else {
-  //       setCharacterNotFoundMessage('No existen personajes con ese nombre');
-  //     }
-  //   })
-  //   .filter((character) => character.house.toLowerCase() === searchByHouse)
-  
   const defineDetailInfo = (characterId) => {
     const characterFound = characterList.find(character => character.id === characterId);
     return characterFound;
@@ -46,7 +36,7 @@ function App() {
       <Route 
         path="/" element={
           <>
-            <Form setSearchByName={setSearchByName} setSearchByHouse={setSearchByHouse} characterNotFoundMessage={characterNotFoundMessage}/>
+            <Form name={name} setName={setName} setHouse={setHouse} characterNotFoundMessage={characterNotFoundMessage}/>
             <Display characterList={filterCharacter}/>
           </>
         } 

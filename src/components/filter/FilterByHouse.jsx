@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 
-function FilterByHouse({setSearchByHouse}) {
+function FilterByHouse({setHouse}) {
 
   const handleSelect = (event) => {
-    setSearchByHouse(event.target.value);
+    setHouse(event.target.value);
   }
 
   return (
-    <div className="Filter">
+    <div className="Filter_container">
       <label htmlFor="">Search by house</label>
       <select name="" id="" onChange={handleSelect}>
         <option value="gryffindor">Gryffindor</option>
@@ -20,7 +20,7 @@ function FilterByHouse({setSearchByHouse}) {
 }
 
 FilterByHouse.propTypes = {
-  setSearchByHouse: PropTypes.func
+  setHouse: PropTypes.func
 }
 
 export default FilterByHouse
