@@ -9,6 +9,14 @@
             margin: 0px 10px;
         }
     }
+    button {
+        margin: 10px 0px 40px 25px;
+        background-color: rgb(148, 50, 191);;
+        color: white;
+        border: 0;
+        padding: 6px 14px;
+        border-radius: 8%;
+    }
 }
 
 .Filter_notFound {
@@ -19,3 +27,4 @@
         font-style: normal;
     }
 }
+

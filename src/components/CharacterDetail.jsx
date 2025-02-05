@@ -4,8 +4,10 @@ import '../styles/CharacterDetail.scss'
 
 function CharacterDetail({defineDetailInfo}) {
 
-    const { characterId } = useParams();
-    console.log(characterId); //dd925874-e800-4eb4-9f0d-4d0fed15634b
+    // COGE EL ID DE LA URL
+    const { characterId } = useParams(); //dd925874-e800-4eb4-9f0d-4d0fed15634b
+
+    // LIFTING DEL ID PARA DEFINIR DATOS
     const character = defineDetailInfo(characterId);
 
   return (
