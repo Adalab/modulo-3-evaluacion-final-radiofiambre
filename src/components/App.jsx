@@ -11,8 +11,10 @@ function App() {
   const [searchByName, setSearchByName] = useState('') // string con un nombre
 
   useEffect(() => {
-    getDataFromApi().then((apiCharacters) => {setCharacterList(apiCharacters)})
-  }, [])
+    getDataFromApi()
+      .then((apiCharacters) => apiCharacters.sort((a, b) => a.name.localeCompare(b.name)))
+      .then(setCharacterList)
+  }, []);
 
   const filterByName = characterList.filter(character => character.name.toLowerCase().includes(searchByName));
 
