@@ -7,3 +7,11 @@
         max-width: 400px;
     }
 }
+
+@media screen and (max-width: 560px) {
+    .Header_container {
+        .Header_logo {
+            max-width: 220px;
+        }
+    }
+}

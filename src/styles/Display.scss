@@ -3,5 +3,35 @@
 .Display_section {
     display: grid;
     margin: 20px 50px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1480px) {
+    .Display_section {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .Display_section {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .Display_section {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .Display_section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .Display_section {
+        grid-template-columns: 1fr;
+    }
 }
