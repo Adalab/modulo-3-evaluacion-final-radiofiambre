@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 function FilterByName({name, setName, characterNotFoundMessage}) {
   
     const handleInput = (event) => {
-      event.preventDefault();
       setName(event.target.value.toLowerCase())
     }
   

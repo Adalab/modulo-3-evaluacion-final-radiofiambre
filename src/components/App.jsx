@@ -1,6 +1,6 @@
 import '../styles/App.scss';
 import { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, matchPath, useLocation } from 'react-router-dom';
 import Display from './Display';
 import Form from './filter/Form';
 import Header from './Header';
@@ -40,11 +40,11 @@ function App() {
   }, [name, filterCharacter]); // Solo vuelve a ejecutarse cuando name o filterCharacter cambian
   
 
-  // PASAR INFO SEGÚN ID/URL(:characterId)
-  const defineDetailInfo = (characterId) => {
-    const characterFound = characterList.find(character => character.id === characterId);
-    return characterFound;
-  }
+  // // PASAR INFO SEGÚN ID/URL(:characterId)
+  const { pathname } = useLocation()
+  const routeData = matchPath("/character-detail/:characterId", pathname)
+  const characterIdUrl = routeData ? routeData.params.characterId : "";
+  const characterInfo = characterList.find(character => character.id === characterIdUrl)
 
   return (
     <>
@@ -58,7 +58,7 @@ function App() {
           </>
         } 
       />
-      <Route path="/character-detail/:characterId" element={<CharacterDetail defineDetailInfo={defineDetailInfo}/>} />
+      <Route path="/character-detail/:characterId" element={<CharacterDetail characterInfo={characterInfo}/>} />
       <Route path="*" element={<PageNotFound/>} />
     </Routes>
   </>

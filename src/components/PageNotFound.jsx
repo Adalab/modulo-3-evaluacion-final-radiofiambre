@@ -6,7 +6,7 @@ function PageNotFound() {
     <div className='PageNotFound_container'>
         <h2>404</h2>
         <h3>Page not found!</h3>
-        <Link to={'/'}><a href="">Go back to start</a></Link>
+        <Link to={'/'}>Go back to start</Link>
     </div>
   )
 }
