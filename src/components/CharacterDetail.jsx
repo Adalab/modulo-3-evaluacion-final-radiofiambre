@@ -4,8 +4,10 @@ import '../styles/CharacterDetail.scss'
 
 function CharacterDetail({characterInfo}) {
 
+    if (!characterInfo) {
+        return <p className=".CharacterDetail_loadingText">Los detalles del personaje se están cargando</p>;
+    }
 
-    
   return (
     <>
     <div className="CharacterDetail_body">

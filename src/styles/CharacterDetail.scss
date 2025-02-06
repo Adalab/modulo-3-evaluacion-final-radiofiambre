@@ -1,5 +1,10 @@
 @import './variables.scss';
 
+.CharacterDetail_loadingText {
+    text-align: center;
+    color: $color-text-light;
+}
+
 .CharacterDetail_body {
     display: flex;
     flex-direction: column;
@@ -10,6 +15,7 @@
     width: 640px;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     gap: 10px;
 }
 

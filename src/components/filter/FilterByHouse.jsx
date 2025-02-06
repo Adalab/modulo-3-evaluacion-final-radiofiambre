@@ -20,6 +20,7 @@ function FilterByHouse({setHouse, house}) {
 }
 
 FilterByHouse.propTypes = {
+  house: PropTypes.string,
   setHouse: PropTypes.func
 }
 
