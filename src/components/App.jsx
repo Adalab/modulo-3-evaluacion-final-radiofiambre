@@ -6,6 +6,7 @@ import Form from './filter/Form';
 import Header from './Header';
 import getDataFromApi from '../services/getDataFromApi';
 import CharacterDetail from './CharacterDetail';
+import PageNotFound from './PageNotFound';
 
 function App() {
 
@@ -58,6 +59,7 @@ function App() {
         } 
       />
       <Route path="/character-detail/:characterId" element={<CharacterDetail defineDetailInfo={defineDetailInfo}/>} />
+      <Route path="*" element={<PageNotFound/>} />
     </Routes>
   </>
   );
