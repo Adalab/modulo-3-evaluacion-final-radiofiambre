@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .CharacterDetail_body {
     display: flex;
     flex-direction: column;
@@ -14,7 +16,7 @@
 .CharacterDetail_linkBack {
     text-decoration: none;
     font-weight: bold;
-    color: grey;
+    color: $color-text-light;
     &:visited { 
         text-decoration: none;
     } 
@@ -27,7 +29,7 @@
 .CharacterDetail_article{
     display: flex;
     align-items: center;
-    background-color: rgb(145, 109, 17);
+    background-color: $color-gold;
     padding: 10px;
     .CharacterDetail_img {
         width: 310px;
@@ -42,7 +44,7 @@
         width: 310px;
         height: 395px;
         text-align: center;
-        color: white;
+        color: $color-text-light;
         .CharacterDetail_houseEmblem {
             width: 100px;
             margin-bottom: 30px;

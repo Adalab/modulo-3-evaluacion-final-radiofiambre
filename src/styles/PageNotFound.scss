@@ -1,21 +1,23 @@
+@import './variables.scss';
+
 .PageNotFound_container {
-    padding-top: 180px;
+    padding-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
     h2 {
-        color: rgb(148, 50, 191);;
+        color:$color-text-highlight;
         font-size: 100px;
         font-weight: bold;
     }
     h3 {
         font-size: 60px;
+        color: $color-text-light;
     }
     a {
         text-decoration: none;
-        // margin: 10px 0px 40px 25px;
-        background-color: rgb(148, 50, 191);;
+        background-color: $color-button;
         color: white;
         padding: 6px 14px;
         border: 5px;

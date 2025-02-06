@@ -1,4 +1,7 @@
+@import './variables.scss';
+
 .Display_section {
     display: grid;
+    margin: 20px 50px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }

@@ -1,9 +1,10 @@
 import '../styles/Header.scss'
+import logo from '../images/logo.png'
 
 function Header() {
   return (
     <div className='Header_container'>
-      <h1>Harry Potter</h1>
+      <img className='Header_logo' src={logo} alt="Harry Potter logo"/>
     </div>
   )
 }

@@ -17,8 +17,10 @@ function Filters(props) {
   
   return (
     <form className="Form_container" onChange={handleForm}>
-      <FilterByName name={props.name} setName={props.setName} characterNotFoundMessage={props.characterNotFoundMessage}/>
-      <FilterByHouse setHouse={props.setHouse} house={props.house}/>
+      <div className='Form_filtersContainer'>
+        <FilterByName name={props.name} setName={props.setName} characterNotFoundMessage={props.characterNotFoundMessage}/>
+        <FilterByHouse setHouse={props.setHouse} house={props.house}/>
+      </div>
       <button onClick={handleReset}>🪄 Reset</button>
     </form>
   )
